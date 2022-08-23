@@ -3,8 +3,7 @@ import { GifsService } from '../services/gifs.service';
 
 @Component({
   selector: 'app-busqueda',
-  templateUrl: './busqueda.component.html',
-  styleUrls: ['./busqueda.component.css']
+  templateUrl: './busqueda.component.html'
 })
 export class BusquedaComponent{
 
@@ -17,6 +16,7 @@ export class BusquedaComponent{
 
     buscar(){
       var valor = this.txtbuscar.nativeElement.value;
+      if(valor.trim().length == 0) return;
       this.gifsService.buscarGifs(valor)
       this.txtbuscar.nativeElement.value = "";
     }
