@@ -8,5 +8,5 @@ html, body{
 #sidebar{
   height: 100%;
   min-height: 100vh;
-  min-width: 180px;
+  min-width: 250px;
 }

@@ -1,1 +1,17 @@
-<p>resultados works!</p>
+
+
+<div class="row" data-masonry='{"percentPosition": true }'>
+
+    <div *ngFor="let gif of resultados"  class=" col-md-4 col-sm-6 animate__animated animate__zoomInDown">
+
+          <div class="card">
+
+            <img [src]="gif.images.downsized_medium.url" [alt]="gif.title" class="card-image-top">
+
+          </div>
+           <!--  TODO: poner en apuntes lo de los corchetes -->
+
+
+    </div>
+
+</div>
