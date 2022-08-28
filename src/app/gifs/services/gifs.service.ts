@@ -41,7 +41,7 @@ export class GifsService {
        .set('limit', 30)
 
       //TODO: poner en apuntes la peticion get y la interfaz de tipado y el local storage
-      this.http.get<any>(`${this.servicioUrl}/search?`, {params: param}).subscribe((resp) => {
+      this.http.get<SearchGifsResponse>(`${this.servicioUrl}/search?`, {params: param}).subscribe((resp) => {
 
           console.log(resp.data);
           this.resultados = resp.data;
